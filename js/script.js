@@ -8,7 +8,7 @@ btn.addEventListener('click', function(){
     
     // ciclo for per stampare i quadratini
     for(let i = 0; i < numBox; i++){
-        let box = drawBox();
+        let box = drawBox(i);
         console.log(box);
         wrapper.append(box);
     }
@@ -16,12 +16,14 @@ btn.addEventListener('click', function(){
 })
 
 // disegno un quadrato
-function drawBox(){
+function drawBox(indexBox){
     const box = document.createElement('div');
     box.classList.add('box');
+    box.innerHTML = indexBox;
+    box.style.color = 'white';
     box.addEventListener('click', function(){
         box.classList.add('active');
-
+        box.style.color = 'black';
     })
     return box;
 }

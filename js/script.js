@@ -5,7 +5,7 @@ btn.addEventListener('click', function(){
     
     const numBox = 100;
     const wrapper = document.getElementById('wrapper');
-    
+    wrapper.innerHTML = '';
     // ciclo for per stampare i quadratini
     for(let i = 0; i < numBox; i++){
         let box = drawBox(i, numBox);

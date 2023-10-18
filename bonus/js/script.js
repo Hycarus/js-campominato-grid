@@ -1,21 +1,16 @@
 const btn = document.querySelector('button');
-const selector = document.querySelector('select');
-selector.addEventListener('change', function(){
-    btn.addEventListener('click', function(){
-        // generare tot (numBox) quadratini
-        let numBox = selector.value;
-        const wrapper = document.getElementById('wrapper');
-        wrapper.innerHTML = '';
-        // ciclo for per stampare i quadratini
-        for(let i = 0; i < numBox; i++){
-            let box = drawBox(i, numBox);
-            console.log(box);
-            wrapper.append(box);
-        }
-    })
+btn.addEventListener('click', function(){
+    const selector = document.querySelector('select').value;
+    // generare tot quadratini
+    const wrapper = document.getElementById('wrapper');
+    wrapper.innerHTML = '';
+    // ciclo for per stampare i quadratini
+    for(let i = 0; i < selector; i++){
+        let box = drawBox(i, selector);
+        console.log(box);
+        wrapper.append(box);
+    }
 })
-
-
 // disegno un quadrato
 function drawBox(indexBox, numCell){
     const box = document.createElement('div');

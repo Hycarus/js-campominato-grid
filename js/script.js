@@ -21,7 +21,7 @@ function drawBox(indexBox, numCell){
     box.classList.add('box');
     box.style.width = `calc(100% / ${Math.sqrt(numCell)})`;
     box.style.height = box.style.width;
-    box.innerHTML = indexBox;
+    box.innerHTML = indexBox + 1;
     box.style.color = 'white';
     box.addEventListener('click', function(){
         box.classList.add('active');

@@ -26,7 +26,7 @@ function drawBox(indexBox, numCell){
     box.addEventListener('click', function(){
         box.classList.add('active');
         box.style.color = 'black';
-        console.log(indexBox)
+        console.log(indexBox + 1)
     })
     return box;
 }

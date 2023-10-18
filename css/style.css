@@ -6,10 +6,7 @@
 }
 
 .box{
-    width: calc(100% / 10 - 6px);
-    height: calc(100% / 10 - 6px);
     border:1px solid white;
-    margin: 3px;
 }
 .active {
     background-color: aqua;

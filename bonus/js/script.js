@@ -1,6 +1,6 @@
 const btn = document.querySelector('button');
 btn.addEventListener('click', function(){
-    const selector = document.querySelector('select').value;
+    const selector = parseInt(document.querySelector('select').value);
     // generare tot quadratini
     const wrapper = document.getElementById('wrapper');
     wrapper.innerHTML = '';
